@@ -56,9 +56,9 @@ node thread receives miner connections and answers wallet queries while keeping 
 operational.
 
 Overall concurrency enables:
-• Independent proof-of-work mining by multiple users.
-• Parallel wallet actions across multiple clients.
-• Continuous background coordination between miners and the bootstrap nodes.
+- Independent proof-of-work mining by multiple users.
+- Parallel wallet actions across multiple clients.
+- Continuous background coordination between miners and the bootstrap nodes.
 
 Known Limitations
 • The wallet input system operates in a blocking mode which restricts user interaction to one
