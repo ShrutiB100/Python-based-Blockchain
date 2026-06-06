@@ -1,8 +1,8 @@
-Project Description
+# Blockchain Project Description
 
 The project demonstrates core blockchain concepts through a simplified Python-based blockchain system which shows decentralized transaction management, proof-of-work, and block validation processes. The system enables multiple clients with wallets to create transactions and send them while miners perform black validation and mining operations. A bootstrap node handles network connection management. The project delivers practical learning about blockchain systems through Python thread-based concurrent programming exercises.
 
-System Components
+SYSTEM COMPONENTS
 
 1. Clients (Wallets)
 - 5 clients (client1, client2, client3, client4, client5)
@@ -15,7 +15,6 @@ System Components
     3. Show Sent Transactions
     4. Show Received Transactions
     5. Quit Wallet
-
 
 2. Miners
 - 3 Miners (miner1, miner2, miner3) running in parallel threads.
@@ -35,7 +34,7 @@ System Components
 - Mining difficulty requires hash to start with “0000”.
 
 
-Running the Project
+RUNNING THE PROJECT
 
 1. Ensure Python 3.10+ is installed.
 2. Required standard libraries: hashlib, time, threading, random, bootstrap, socket, json.
@@ -43,7 +42,7 @@ Running the Project
 4. Interact with wallets via menu.
 5. When sending a transaction, choose receiver, amount and fee.
 
-Concurrency Model
+CONCURRENCY MODEL
 
 The project uses Python’s threading module to simulate a decentralized blockchain network in
 which miners and wallets operate concurrently. The system runs each major component
@@ -61,7 +60,7 @@ Overall concurrency enables:
 - Parallel wallet actions across multiple clients.
 - Continuous background coordination between miners and the bootstrap nodes.
 
-Known Limitations
+KNOWN LIMITATIONS
 - The wallet input system operates in a blocking mode which restricts user interaction to one
 wallet menu at any given time.
 - Blockchain operates as an in-memory system which lacks any form of permanent storage
@@ -70,7 +69,7 @@ capabilities.
 - The network simulation operates on a local setup, which does not include actual socket
 operations or latency simulation.
 
-Future Improvements
+FUTURE IMPROVEMENTS
 - Blockchain storage requires permanent solution through database systems or file storage
 mechanisms.
 - The system needs to establish a network simulation which duplicates actual sockets and
