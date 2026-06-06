@@ -10,11 +10,11 @@ SYSTEM COMPONENTS -
     - Wallets connect to a miner to sync the blockchain and receive updates.
     - Wallets simulate delays using sleep of 5 seconds to represent network or user wait times.
     - Menu-driven interface:
-    1. Send Transaction
-    2. Show Balance
-    3. Show Sent Transactions
-    4. Show Received Transactions
-    5. Quit Wallet
+        1. Send Transaction
+        2. Show Balance
+        3. Show Sent Transactions
+        4. Show Received Transactions
+        5. Quit Wallet
 
 2. Miners
     - 3 Miners (miner1, miner2, miner3) running in parallel threads.
