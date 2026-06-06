@@ -54,6 +54,7 @@ menu selections, and building transactions sent to the chosen miner. Wallet thre
 own transaction history while staying connected to a miner for instant updates. The bootstrap
 node thread receives miner connections and answers wallet queries while keeping the system
 operational.
+
 Overall concurrency enables:
 - Independent proof-of-work mining by multiple users.
 - Parallel wallet actions across multiple clients.
