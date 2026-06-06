@@ -3,6 +3,7 @@ Project Description
 The project demonstrates core blockchain concepts through a simplified Python-based blockchain system which shows decentralized transaction management, proof-of-work, and block validation processes. The system enables multiple clients with wallets to create transactions and send them while miners perform black validation and mining operations. A bootstrap node handles network connection management. The project delivers practical learning about blockchain systems through Python thread-based concurrent programming exercises.
 
 System Components
+
 1. Clients (Wallets)
 - 5 clients (client1, client2, client3, client4, client5)
 - Each wallet stores received transactions and can send funds to other wallets.
@@ -35,6 +36,7 @@ System Components
 
 
 Running the Project
+
 1. Ensure Python 3.10+ is installed.
 2. Required standard libraries: hashlib, time, threading, random, bootstrap, socket, json.
 3. Start the simulation: python main.py
@@ -42,6 +44,7 @@ Running the Project
 5. When sending a transaction, choose receiver, amount and fee.
 
 Concurrency Model
+
 The project uses Python’s threading module to simulate a decentralized blockchain network in
 which miners and wallets operate concurrently. The system runs each major component
 bootstrap node, miners, and wallets in separate threads which operate independently. The
@@ -53,7 +56,6 @@ menu selections, and building transactions sent to the chosen miner. Wallet thre
 own transaction history while staying connected to a miner for instant updates. The bootstrap
 node thread receives miner connections and answers wallet queries while keeping the system
 operational.
-
 Overall concurrency enables:
 - Independent proof-of-work mining by multiple users.
 - Parallel wallet actions across multiple clients.
