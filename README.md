@@ -15,26 +15,33 @@ times.
 3. Show Sent Transactions
 4. Show Received Transactions
 5. Quit Wallet
+
+
 2. Miners
 • 3 Miners (miner1, miner2, miner3) running in parallel threads.
 • Register with the bootstrap node and maintain peer connections.
 • Maintain a mempool of pending transactions.
 • Produce blocks with proof-of-work, each containing multiple transactions.
 • Broadcast mined blocks to all connected peers.
+
 3. Bootstrap Node
 • Manages network registration for miners.
 • Provides miner connectivity details to wallets.
+
 4. Blockchain
 • Hash-linked blocks stored in memory.
 • Each block includes: transactions, timestamp, previous hash, nonce, and proof-ofwork.
 • Transaction processing uses a simplified Merkle tree.
 • Mining difficulty requires hash to start with “0000”.
+
+
 Running the Project
 1. Ensure Python 3.10+ is installed.
 2. Required standard libraries: hashlib, time, threading, random, bootstrap, socket, json.
 3. Start the simulation: python main.py
 4. Interact with wallets via menu.
 5. When sending a transaction, choose receiver, amount and fee.
+
 Concurrency Model
 The project uses Python’s threading module to simulate a decentralized blockchain network in
 which miners and wallets operate concurrently. The system runs each major component
@@ -47,10 +54,12 @@ menu selections, and building transactions sent to the chosen miner. Wallet thre
 own transaction history while staying connected to a miner for instant updates. The bootstrap
 node thread receives miner connections and answers wallet queries while keeping the system
 operational.
+
 Overall concurrency enables:
 • Independent proof-of-work mining by multiple users.
 • Parallel wallet actions across multiple clients.
 • Continuous background coordination between miners and the bootstrap nodes.
+
 Known Limitations
 • The wallet input system operates in a blocking mode which restricts user interaction to one
 wallet menu at any given time.
@@ -59,6 +68,7 @@ capabilities.
 • Miner selection and transaction routing are simplified and random.
 • The network simulation operates on a local setup, which does not include actual socket
 operations or latency simulation.
+
 Future Improvements
 • Blockchain storage requires permanent solution through database systems or file storage
 mechanisms.
