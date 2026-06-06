@@ -4,35 +4,34 @@ The project demonstrates core blockchain concepts through a simplified Python-ba
 
 System Components
 1. Clients (Wallets)
-• 5 clients (client1, client2, client3, client4, client5)
-• Each wallet stores received transactions and can send funds to other wallets.
-• Wallets connect to a miner to sync the blockchain and receive updates.
-• Wallets simulate delays using sleep of 5 seconds to represent network or user wait
-times.
-• Menu-driven interface:
-1. Send Transaction
-2. Show Balance
-3. Show Sent Transactions
-4. Show Received Transactions
-5. Quit Wallet
+- 5 clients (client1, client2, client3, client4, client5)
+- Each wallet stores received transactions and can send funds to other wallets.
+- Wallets connect to a miner to sync the blockchain and receive updates.
+- Wallets simulate delays using sleep of 5 seconds to represent network or user wait times.
+- Menu-driven interface:
+    1. Send Transaction
+    2. Show Balance
+    3. Show Sent Transactions
+    4. Show Received Transactions
+    5. Quit Wallet
 
 
 2. Miners
-• 3 Miners (miner1, miner2, miner3) running in parallel threads.
-• Register with the bootstrap node and maintain peer connections.
-• Maintain a mempool of pending transactions.
-• Produce blocks with proof-of-work, each containing multiple transactions.
-• Broadcast mined blocks to all connected peers.
+- 3 Miners (miner1, miner2, miner3) running in parallel threads.
+- Register with the bootstrap node and maintain peer connections.
+- Maintain a mempool of pending transactions.
+- Produce blocks with proof-of-work, each containing multiple transactions.
+- Broadcast mined blocks to all connected peers.
 
 3. Bootstrap Node
-• Manages network registration for miners.
-• Provides miner connectivity details to wallets.
+- Manages network registration for miners.
+- Provides miner connectivity details to wallets.
 
 4. Blockchain
-• Hash-linked blocks stored in memory.
-• Each block includes: transactions, timestamp, previous hash, nonce, and proof-ofwork.
-• Transaction processing uses a simplified Merkle tree.
-• Mining difficulty requires hash to start with “0000”.
+- Hash-linked blocks stored in memory.
+- Each block includes: transactions, timestamp, previous hash, nonce, and proof-ofwork.
+- Transaction processing uses a simplified Merkle tree.
+- Mining difficulty requires hash to start with “0000”.
 
 
 Running the Project
@@ -61,20 +60,20 @@ Overall concurrency enables:
 - Continuous background coordination between miners and the bootstrap nodes.
 
 Known Limitations
-• The wallet input system operates in a blocking mode which restricts user interaction to one
+- The wallet input system operates in a blocking mode which restricts user interaction to one
 wallet menu at any given time.
-• Blockchain operates as an in-memory system which lacks any form of permanent storage
+- Blockchain operates as an in-memory system which lacks any form of permanent storage
 capabilities.
-• Miner selection and transaction routing are simplified and random.
-• The network simulation operates on a local setup, which does not include actual socket
+- Miner selection and transaction routing are simplified and random.
+- The network simulation operates on a local setup, which does not include actual socket
 operations or latency simulation.
 
 Future Improvements
-• Blockchain storage requires permanent solution through database systems or file storage
+- Blockchain storage requires permanent solution through database systems or file storage
 mechanisms.
-• The system needs to establish a network simulation which duplicates actual sockets and
+- The system needs to establish a network simulation which duplicates actual sockets and
 network latency conditions.
-• The system needs to develop more advanced methods for choosing miners, and directing
+- The system needs to develop more advanced methods for choosing miners, and directing
 transactions.
-• The system provides users with a GUI option to visualize their wallets, and mining
+- The system provides users with a GUI option to visualize their wallets, and mining
 operations, together with the blockchain data.
